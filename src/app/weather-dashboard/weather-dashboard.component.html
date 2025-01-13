@@ -1,0 +1,55 @@
+<section class="weather-dashboard">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12 mobile-nav d-block d-md-none">
+        <h5>Weather Dashboard</h5>
+      </div>
+      <!-- left-side nav -->
+      <div class="col-2 col-md-2 left-nav d-none d-md-block">
+        <h5>Weather Dashboard</h5>
+        <div class="design-tag">
+          <p class="mb-0">Design by:</p>
+          <span>Saiky Patowary</span>
+        </div>
+      </div> 
+      <div class="col-12 col-md-10">
+        <!-- search-bar code -->
+        <div class="search-div">
+          <div class="row">
+            <div class="col-12 d-flex justify-content-end">
+              <app-location-search (locationSelected)="fetchWeather($event)"></app-location-search>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <!-- Current weather for searched city -->
+          <div class="col-12 ">
+            <div class="card-weather">
+              <h5>Current Weather</h5>
+              <div class="no-data-div" *ngIf="!currentWeather">
+                <div class="no-data-img">
+                  <img src="../../assets/img/nodata.png" alt="No Data Available">
+                </div>
+                <p>No location selected. Please enter a location to see the current weather.</p>
+              </div>
+              <app-current-weather *ngIf="currentWeather" [weather]="currentWeather"></app-current-weather>
+            </div>
+          </div>
+          <!-- Forecast for upcoming 3days for  searched city -->
+          <div class="col-12">
+            <div class="card-forecast">
+              <h5>Weather Forecast(3 Days)</h5>
+              <div class="no-data-div" *ngIf="!forecastData.length">
+                <div class="no-data-img">
+                  <img src="../../assets/img/nodata.png" alt="No Data Available">
+                </div>
+                <p>No location selected. Please enter a location to see the weather forecast.</p>
+              </div>
+              <app-forecast *ngIf="forecastData.length" [forecast]="forecastData"></app-forecast>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

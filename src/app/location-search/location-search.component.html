@@ -1,0 +1,9 @@
+<div class="input-group mb-3 search-box">
+  <span class="input-group-text">
+    <span class="material-icons">location_on</span>
+  </span>
+  <input [(ngModel)]="location" type="text" class="form-control" placeholder="Enter city or zip code" />
+  <button (click)="onSearch()" class="btn btn-search">
+    <span class="material-icons">search</span>
+  </button>
+</div>

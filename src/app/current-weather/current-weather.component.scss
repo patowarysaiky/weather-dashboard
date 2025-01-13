@@ -1,0 +1,15 @@
+@import '/src/styles/variable.scss';
+.current-weather{
+    background-color: $primary-color;
+    margin-bottom: 10px;
+    padding: 10px 10px;
+    border-radius: 20px;
+    .weathertemp-lebel{
+        font-weight: 600;
+        .weathertemp{
+            font-weight: 400;
+        }
+    }
+}
+
+

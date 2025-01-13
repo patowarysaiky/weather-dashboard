@@ -1,0 +1,13 @@
+<ul class="forecast"> 
+  <li *ngFor="let day of forecast">
+    <div>
+    <p class="mb-0 date">Date: {{ day.date }}</p>   
+    <p class="mb-0">{{ day.day.condition.text }}</p>
+    <img [src]="day.day.condition.icon" alt="Forecast Icon" />
+    </div>
+    <div class="d-flex justify-content-between">
+      <span class="temp-count">High: {{ day.day.maxtemp_c }} °C </span>
+      <span class="temp-count">Low: {{ day.day.mintemp_c }} °C</span>
+    </div>
+  </li>
+</ul>

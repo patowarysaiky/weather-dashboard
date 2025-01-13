@@ -1,0 +1,68 @@
+@import '/src/styles/variable.scss';
+.weather-dashboard {
+  background-color: $secondary-color;
+  height: 100vh;
+  .mobile-nav {
+    background-color: $primary-color;
+  }
+  .left-nav {
+    background-image: url('../../assets/img/cloud2.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    position: relative;
+    padding: 10px 10px;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+    }
+    h5 {
+      position: relative;
+      z-index: 2;
+      color: $secondary-color;
+    }
+
+    .design-tag {
+      position: absolute;
+      bottom: 2%;
+      left: 30%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: $secondary-color;
+      font-size: 8px;
+      z-index: 1;
+    }
+  }
+
+  .search-div {
+    padding: 10px 10px;
+  }
+
+  .card-img {
+    background-image: url('../../assets/img/env.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    width: 100%;
+  }
+
+  .no-data-div {
+    text-align: center;
+
+    .no-data-img {
+      width: 10%;
+      margin: 0px auto;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+}

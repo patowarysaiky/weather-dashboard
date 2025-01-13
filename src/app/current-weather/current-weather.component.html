@@ -1,0 +1,7 @@
+<div class="current-weather">
+  <h3>{{ weather?.location?.name }}</h3>
+  <p class="mb-0 weathertemp-lebel">Temperature: <span class="weathertemp">{{ weather?.current?.temp_c }} °C</span></p>
+  <p class="mb-0 weathertemp-lebel">Humidity:<span class="weathertemp"> {{ weather?.current?.humidity }} %</span></p>
+  <p class="mb-0 weathertemp-lebel">Wind Speed: <span class="weathertemp">{{ weather?.current?.wind_kph }} kph</span></p>
+  <img [src]="weather?.current?.condition?.icon" alt="Weather Icon" />
+</div>

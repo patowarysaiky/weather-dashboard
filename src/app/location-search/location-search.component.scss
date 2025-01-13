@@ -1,0 +1,41 @@
+@import '/src/styles/variable.scss';
+
+.search-box {
+    width: 430px;
+    @media (max-width: 768px) {
+        width: 100%;
+    }
+    .input-group-text {
+        background-color: $light-blue;
+        color: $secondary-color;
+        border-radius: 4px 0px 0px 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 4px 0px;
+        border: 1px solid $primary-color;
+    }
+    .form-control {
+        border: 1px solid $primary-color;
+        border-right: none;
+        border-radius: 0;
+        padding: 5px;
+        font-size: 12px;
+        &:focus {
+            box-shadow: none !important;
+        }
+        &::placeholder {
+            color: #ccc;
+            font-style: italic;
+        }
+    }
+    .btn-search {
+        border-radius: 0px 4px 4px 0px;
+        border: none;
+        padding: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $primary-color;
+    }
+}

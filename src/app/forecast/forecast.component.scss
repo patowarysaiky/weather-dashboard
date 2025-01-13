@@ -1,0 +1,35 @@
+@import '/src/styles/variable.scss';
+
+.forecast {
+    list-style-type: none;
+    padding: 0px;
+    display: flex;
+    gap: 10px;
+
+    @media (max-width: 768px) {
+        display: block;
+    }
+
+    li {
+        width: 33%;
+        background-color: $primary-color;
+        margin-bottom: 10px;
+        padding: 10px 10px;
+        border-radius: 10px;
+
+        @media (max-width: 768px) {
+            width: 100%;
+        }
+        .date{
+            font-weight: 600;
+        }
+        .temp-count {
+            background-color: $ornage;
+            padding: 5px 5px;
+            color: $secondary-color;
+            font-size: 11px;
+            font-weight: 600;
+            border-radius: 5px;
+        }
+    }
+}
